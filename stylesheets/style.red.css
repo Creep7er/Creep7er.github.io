@@ -1,0 +1,1274 @@
+/*
+--------------------------------------------------------* 
+
+[INSTA, Main Stylesheet ]
+
+    Color        : RED ( #E94C6F )
+
+    Name         : INSTA - Responsive Onepage Resume Template
+
+    Version      :  1.0 
+
+    Author       :  Pixel_Factory
+
+    Author URI   :  http://themeforest.net/user/Pixel_Factory
+
+    Author Email : h.nafees.anwar@gmail.com
+
+
+--------------------------------------------------------
+
+--------------------------------------------------------
+
+   TABLE OF CONTENTS:
+  ====================
+
+    1 ) Font Import From Google Fonts
+
+    2 ) Preloader Styles
+
+    3 ) General Rulas
+
+    4 ) Homepage Styles
+
+        - ( a ) Homepage
+        - ( b ) Introduction Section
+        - ( c ) Navigation Menu
+
+    5 ) Close Button
+
+    6 ) General Rules for Content Pages Fixed Image
+
+    7 ) Profile Page
+
+        - ( a ) Story of Glory
+        - ( b ) What Can I Do
+        - ( c ) Some Facts
+
+    8 ) Resume Page
+
+        - ( a ) Education Section
+        - ( b ) Experience Section
+        - ( c ) Skills Section
+
+    9 ) Portfolio Page
+
+        - ( a ) Portfolio Section
+        - ( b )  Testimonial Section
+
+    10 ) Contact Page
+
+        - ( a )  Contact Form
+        - ( b )  Contact Details
+
+    11 ) Footer
+
+--------------------------------------------------------
+*/
+
+                    /*-----------------------------------
+                       1 ) Font Import From Google Fonts
+                      -----------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Hind:300,500);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic);
+
+                    /*----------------------
+                       2 ) Preloader Styles
+                      ----------------------*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1a1b23;
+    z-index: 10000;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    -moz-transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    -ms-transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    -o-transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+    -webkit-animation: loader 1.2s infinite ease-in-out;
+    animation: loader 1.2s infinite ease-in-out;
+}
+
+.loader span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    background-color: #E94C6F;
+    -webkit-animation: loaderBlock 1.2s infinite ease-in-out both;
+    animation: loaderBlock 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+.loader span:nth-child(2) {
+    top: 0;
+    right: 0;
+    -webkit-animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    -webkit-animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+    animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+@-webkit-keyframes loader {
+    0%, 10%, 100% {
+        width: 40px;
+        height: 40px;
+    }
+    65% {
+        width: 80px;
+        height: 80px;
+    }
+} 
+
+@-webkit-keyframes loaderBlock {
+    0%, 30% {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@-webkit-keyframes loaderBlockInverse {
+    0%, 20% {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes loader {
+    0%, 10%, 100% {
+        width: 40px;
+        height: 40px;
+    }
+    65% {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes loaderBlock {
+    0%, 30% {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes loaderBlockInverse {
+    
+    0%, 20% {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }
+    55% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+}
+
+                    /*-------------------
+                       3 ) General Rulas
+                      -------------------*/
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #343333;
+}
+
+html,
+body,
+textarea,
+button,
+input {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Hind', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.42;
+}
+
+h1 {
+    font-size: 63px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h2.small-heading {
+    padding: 60px 0 20px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+                    /*---------------------
+                       4 ) Homepage Styles
+                      ---------------------*/
+
+/* ( a ) Homepage */
+
+.home-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* ( b ) Introduction Section */
+
+.introduction {
+    float: left;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.introduction img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #1a1b23;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 10;
+    top: 50%;
+    opacity: 0.9;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.intro-content h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.intro-content h1 span,
+.main-heading h1 span {
+    color: #E94C6F;
+}
+
+.intro-content h2 {
+    color: #fff;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.social-media {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    outline: 0 none;
+    padding: 0 10px;
+}
+
+.social-media a + .tooltip > .tooltip-inner {
+    background-color: transparent;
+    color: #E94C6F;
+    font-size: 16px;
+}
+.social-media a + .tooltip > .tooltip-arrow {
+    border-bottom-color: transparent;
+}
+
+/*Bootstrap tooltips Customized*/
+
+.social-media a:hover {
+    color: #E94C6F;
+}
+
+/* ( c ) Navigation Menu */
+
+.menu {
+    float: left;
+    padding: 0;
+    position: relative;
+}
+
+.menu > div {
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu > div > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-transition: -webkit-transform 1s linear;
+    -moz-transition: -moz-transform 1s linear;
+    -ms-transition: -ms-transform 1s linear;
+    -o-transition: -o-transform 1s linear;
+    transition: transform 1s linear;
+}
+
+.menu > div:hover > img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.heading {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.heading i {
+    background: rgba(256, 256, 256, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto auto 10px;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(256, 256, 256, 0.2);
+    width: 60px;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.menu > div:hover .heading i {
+    box-shadow: 0 0 0 50px rgba(256, 256, 256, 0);
+}
+
+.heading h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+.heading h2 span {
+    color: #E94C6F;
+}
+
+.heading h3 {
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 16px;
+    opacity: 0.9;
+    font-style: italic;
+    font-weight: 300;
+}
+
+
+                    /*------------------
+                       5 ) Close Button
+                      ------------------*/
+
+.close-btn {
+    background: url(../images/icon/close.png);
+    z-index: 1000;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 3%;
+    top: 30px;
+    background-size: cover;
+}
+
+                    /*-------------------------------------------------
+                       6 ) General Rules for Content Pages Fixed Image
+                      -------------------------------------------------*/
+
+.profile-page,
+.resume-page,
+.portfolio-page,
+.contact-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.image-container {
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    overflow: hidden;
+}
+
+.main-heading {
+    position: relative;
+    top: 50%;
+    padding-left: 50px;
+    -webkit-transform: translateY(200%);
+    -moz-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    -o-transform: translateY(200%);
+    transform: translateY(200%);
+}
+
+.main-heading h1 {
+    color: #fff;
+    position: relative;
+    text-align: left;
+}
+
+.main-heading h1:after {
+    background-color: #E94C6F;
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 400px;
+    height: 6px;
+}
+
+.content-container {
+    left: 41.666%;
+    position: relative;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+                    /*------------------
+                       7 ) Profile Page
+                      ------------------*/
+
+/* ( a ) Story of Glory */
+
+.profile-page .image-container {
+    background: url(../images/background/profile_image.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.story {
+    background: url(../images/background/story_bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.story-content {
+    padding: 20px;
+}
+
+.story-content img {
+    padding: 0;
+    border: 1px solid #E94C6F;
+}
+
+.story-content div h3 {
+    color: #E94C6F;
+    line-height: 1;
+    margin-top: 0;
+}
+
+.story-content div p {
+    text-indent: 25px;
+}
+
+.story-content div a {
+    border: 1px solid #E94C6F;
+    color: #E94C6F;
+    display: block;
+    float: left;
+    margin: 29px 5px;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-align: center;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.story-content div a:hover {
+    background: #E94C6F;
+    color: #fff;
+}
+
+/* ( b ) What Can I Do */
+
+.services-container {
+    background: #E94C6F;
+}
+
+.services-container h2 {
+    color: #fff;
+}
+
+.services {
+    text-align: center;
+    padding: 15px;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.services:hover {
+    background: rgba( 255, 255, 255, 0.05);
+}
+
+.services i {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15), 0 0 0 0 rgba(255, 255, 255, 0.3);
+    color: #E94C6F;
+    font-size: 36px;
+    height: 60px;
+    line-height: 60px;
+    width: 60px;
+    margin: 20px 0 10px 0;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.services:hover i {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15), 0 0 0 40px rgba(255, 255, 255, 0);
+}
+.services p,
+.services h3 {
+    color: #fff;
+}
+
+/* ( c ) Some Facts */
+
+.facts {
+    background: url(../images/background/facts-bg.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 50px 15px;
+}
+
+                    /*-----------------
+                       8 ) Resume Page
+                      -----------------*/
+
+/* ( a ) Education Section */
+
+.resume-page .image-container {
+    background: url(../images/background/resume_image.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.education-container {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.education-container:before {
+    background: #E94C6F;
+    content: "";
+    height: 96%;
+    left: 50px;
+    position: absolute;
+    top: 2%;
+    width: 2px;
+}
+
+.item {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.education-container .bullet {
+    background: #E94C6F;
+    border: 5px solid #f5f5f5;
+    border-radius: 50%;
+    height: 30px;
+    left: 21px;
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    vertical-align: top;
+}
+
+.education-content {
+    display: inline-block;
+    padding: 0 15px;
+    margin-left: 15px;
+    width: 88%;
+}
+
+.education-content h3 {
+    background: #E94C6F;
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.education-content h3:before {
+    border-color: transparent #E94C6F transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 5px;
+}
+
+.education-content h3 span {
+    font-size: 16px;
+}
+
+.education-content p {
+    padding: 15px 5px;
+}
+
+/* ( b ) Experience Section */
+
+.experience {
+    background: #E94C6F;
+}
+
+.experience h2 {
+    color: #fff;
+}
+
+.experience-container {
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
+.experience-container:before {
+    background: #fff;
+    content: "";
+    height: 96%;
+    right: 50px;
+    position: absolute;
+    top: 2%;
+    width: 2px;
+}
+
+.experience-container .bullet {
+    background: #fff;
+    border: 5px solid #E94C6F;
+    border-radius: 50%;
+    height: 30px;
+    right: 21px;
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    vertical-align: top;
+}
+
+.experience-content {
+    display: inline-block;
+    padding: 0 15px;
+    margin-left: 15px;
+    width: 88%;
+}
+
+.experience-content h3 {
+    background: #fff;
+    color: #E94C6F;
+    display: block;
+    margin: 0;
+    line-height: 1.42;
+    padding: 10px;
+    position: relative;
+}
+
+.experience-content h3:before {
+    border-color: transparent transparent transparent #fff;
+    border-image: none;
+    border-style: solid;
+    border-width: 10px;
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 5px;
+}
+
+.experience-content h3 span {
+    font-size: 16px;
+}
+
+.experience-content p {
+    padding: 15px 5px;
+    color: #fff;
+}
+
+/* ( c ) Skills Section */
+
+.skill-container {
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.skill {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.skill span {
+    color: #343333;
+    font-size: 18px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+                    /*--------------------
+                       9 ) Portfolio Page
+                      --------------------*/
+
+/* ( a ) Portfolio Section */
+
+.portfolio-page .image-container {
+    background: url(../images/background/portfolio_image.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.project-controls {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.filter {
+    background: none;
+    border: 1px solid #E94C6F;
+    color: #E94C6F;
+    margin: 10px 0;
+    padding: 10px 25px;
+    -webkir-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.filter:hover {
+    background: #E94C6F;
+    color: #fff;
+}
+
+.filter.active {
+    background: #E94C6F;
+    color: #fff;
+}
+
+#projects > .mix {
+    display: none;
+}
+
+.projet-items {
+    padding: 20px;
+}
+
+/*----- Hover Effect Portfolio Image --------*/
+
+.project {
+    width: 100%;
+    overflow: hidden;
+    margin: 15px 0;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.project .ovrly {
+    background: rgba(233, 76, 111, 0.5);
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.project .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.project .buttons a {
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+    opacity: 0;
+    margin: 0 2px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    display: block;
+    line-height: 40px;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #343333;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s;
+    -o-transition: -o-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.project .buttons .fa-search {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.project:hover .buttons a {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project:hover .ovrly {
+    opacity: 1;
+}
+
+/*----- Hover Effect Portfolio Image [ END ] --------*/
+
+.pop-up-box {
+    display: none;
+}
+
+.popup_content {
+    max-width: 500px;
+    border: 5px solid #E94C6F;
+    background: #fff;
+}
+
+.popup_content img {
+    display: block;
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.popup_content .popup-content {
+    padding: 15px;
+}
+
+.popup_content h3 {
+    text-align: center;
+}
+
+.popup_content a {
+    border: 1px solid #E94C6F;
+    color: #E94C6F;
+    display: block;
+    width: 150px;
+    margin: 30px auto;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.popup_content a:hover {
+    background: #E94C6F;
+    color: #fff;
+}
+
+/*----- Popup Sty;es [ END ] --------*/
+
+/* ( b )  Testimonial Section */
+
+.testimonials {
+    background: #E94C6F;
+}
+
+.testimonials h2 {
+    color: #fff;
+}
+
+.testimonials-container {
+    padding: 20px;
+}
+
+.testimonials-container div div p {
+    font-style: italic;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.testimonials-container div div p i {
+    margin: 0 5px;
+}
+
+.testimonials-container div div h3 {
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+}
+
+                    /*-------------------
+                       10 ) Contact Page
+                      -------------------*/
+
+/* ( a )  Contact Form */
+
+.contact-page .image-container {
+    background: url(../images/background/contact_image.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.contact-form {
+    float: none;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #E94C6F;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 2px;
+    height: 40px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background: #f5f5f5;
+    width: 100%;
+}
+
+.contact-form textarea {
+    height: 300px;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.contact-form input:-moz-placeholder,
+.contact-form textarea:-moz-placeholder {
+    font-style: italic;
+}
+
+.contact-form input::-moz-placeholder,
+.contact-form textarea::-moz-placeholder {
+    font-style: italic;
+}
+
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+    font-style: italic;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form input:hover,
+.contact-form textarea:hover {
+    box-shadow: 0px 0px 3px 0px #E94C6F;
+}
+
+.contact-form button {
+    background: none;
+    border-radius: 2px;
+    border: 1px solid #E94C6F;
+    color: #E94C6F;
+    margin: 10px 0;
+    padding: 10px 25px;
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover {
+    background: #E94C6F;
+    color: #fff;
+}
+
+.error, .success {
+	display: none;
+}
+
+.error h3,
+.success h3 {
+    border-radius: 2px;
+    display: block;
+    margin: 10px 0;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.error h3 {
+    color: #c9302c;
+    border: 1px solid #c9302c;
+}
+
+.success h3 {
+    color: #449d44;
+    border: 1px solid #449d44;
+}
+
+.google-map {
+    width: 100%;
+    height: 700px;
+}
+
+/* ( b )  Contact Details */
+
+.contact {
+    padding: 20px;
+    height: 155px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.contact p i {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.contact-details .social-media {
+    margin: 0;
+    padding: 20px 0;
+}
+
+.contact-details .social-media a {
+    background: #343333 none repeat scroll 0 0;
+    border-radius: 50%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 50px;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.contact-details .social-media a + .tooltip > .tooltip-inner {
+    background-color: #343333;
+    color: #E94C6F;
+    font-size: 16px;
+    padding: 3px 10px 5px 10px;
+    border-radius: 2px;
+    border: 0 none;
+}
+
+.contact-details .social-media a + .tooltip > .tooltip-arrow {
+    border-top-color: #343333;
+}
+
+                    /*-------------
+                       11 ) Footer 
+                      -------------*/
+
+.footer {
+    background: #E94C6F;
+    padding: 10px 20px 6px 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    float: left;
+}
+.footer p {
+    line-height: 1;
+    color: #fff;
+    float: right;
+    margin: 0;
+}
